@@ -26,10 +26,10 @@ const questions = [
         message: "How do you use this project?"
     },
     {
-        type: "checkbox",
+        type: "list",
         name: "license",
         message: "Choose a license for your project:",
-        choices: ["Apache", "MIT", "Mozilla-Public", "none"]
+        choices: ["MIT", "Apache", "Mozilla Public", "none"]
     },
     {
         type: "input",
@@ -54,10 +54,21 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) => {
+        if (err)
+            throw err
+        console.log("README created!")
+    })
+}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer.prompt(questions).then(function (response) {
+        console.log(response)
+        writeToFile("your-new-README.md", generateMarkdown(response))
+    })
+}
 
 // Function call to initialize app
 init();
