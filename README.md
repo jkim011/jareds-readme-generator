@@ -24,6 +24,12 @@
       npm i inquirer@8.2.4
 
   ## Usage
+  **Click below for demonstration video:** <br>
+  [readme-generator-video.webm](https://user-images.githubusercontent.com/112585959/202081360-5a2621aa-f1bf-4fb7-89e1-d37b151fc94d.webm) <br>
+  
+  **Image of newly generated README:** <br>
+  ![](./utils/readme-generator-pic.PNG) <br>
+  
   In the VS code command line under the index.js file, run the following: <br>
       node index.js 
   
